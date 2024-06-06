@@ -9,10 +9,10 @@ export const ProductInfo = {
     Esta propiedad es ideal para familias que buscan un hogar cómodo y sofisticado en una ubicación privilegiada. Ven y descubre todo lo que esta casa en Congreso 1920 tiene para ofrecer.\n
     Contacto: 5550125`,
     image: "img/casa.png",
-    mts: '670mts²',
-    baños: 4,
-    habitaciones: 3,
-    garaje: 'Si',
-    piscina: 'Si',
+    squareMeters: '670mts²',
+    bathrooms: 4,
+    bedrooms: 3,
+    garage: 'Si',
+    pool: 'Si',
   };
   

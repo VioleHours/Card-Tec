@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 export interface Product {
-  title: string;
-  price: number;
-  shortDescription: string;
-  longDescription: string;
-  image: string;
-  mts?: string;
-  baños?: number;
-  habitaciones?: number;
-  garaje?: string;
-  piscina?: string;
+    title: string;
+    price: number;
+    shortDescription: string;
+    longDescription: string;
+    image: string;
+    squareMeters?: string;
+    bathrooms?: number;
+    bedrooms?: number;
+    garage?: string;
+    pool?: string;
 }
 
 interface CardProps {
@@ -56,7 +56,7 @@ const Card: React.FC<CardProps> = ({ product }) => {
           className="fixed inset-0 bg-gray-200 bg-opacity-50 flex items-center justify-center z-50 w-full h-full overflow-y-auto"
           onClick={closeDescription}
         >
-          <div className="relative  flex flex-row bg-white p-4 rounded-xl shadow-lg max-w-screen-md w-full mx-4 md:h-full sm:h-[150%]">
+          <div className="relative  flex flex-row bg-white p-4 rounded-xl shadow-lg max-w-screen-md w-full mx-4 md:h-full md:fixed md:overflow-y-auto">
             <button
               className="absolute top-0 right-0 mt-2 mr-2 text-gray-400 px-4 py-2 rounded shadow-md text-xl"
               onClick={closeDescription}
@@ -74,19 +74,19 @@ const Card: React.FC<CardProps> = ({ product }) => {
                   ${product.price.toLocaleString("en-US")}
                 </p>
                 <p className="text-gray-700 font-bold text-lg">
-                  Mts²: {product.mts}
+                  Mts²: {product.squareMeters}
                 </p>
                 <p className="text-gray-700 font-bold text-lg">
-                  Habitaciones: {product.habitaciones}
+                  Habitaciones: {product.bathrooms}
                 </p>
                 <p className="text-gray-700 font-bold text-lg">
-                  Baños: {product.baños}
+                  Baños: {product.bedrooms}
                 </p>
                 <p className="text-gray-700 font-bold text-lg">
-                  Garaje: {product.garaje}
+                  Garaje: {product.garage}
                 </p>
                 <p className="text-gray-700 font-bold text-lg">
-                  Piscina: {product.piscina}
+                  Piscina: {product.pool}
                 </p>
               </div>
               <div>
